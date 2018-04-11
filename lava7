@@ -1,0 +1,23 @@
+Q Shell Script to prefix all file names with date time and year format.
+
+file="/home/lavanya/test"
+cdate=$(date +%d-%m-%Y)
+for file in *
+do      
+        mv "$file" "$cdate"_"$file"
+done 
+
+OUTPUT
+
+27-02-2018_t1
+27-02-2018_t2
+27-02-2018_t3
+
+grep with all possible options
+
+$ grep -i "unix" sample
+$ grep -v "unix" sample
+$ grep -n "unix" sample
+$ grep -c "unix" sample
+$ grep -l "unix" sample
+$ grep -x "unix" sample
